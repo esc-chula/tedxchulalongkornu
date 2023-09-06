@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: '@fontsource/ibm-plex-sans-thai-looped';
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Bold";
+    src: '@fontsource/poppins/700.css';
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Medium";
+    src: '@fontsource/ibm-plex-sans-thai/500.css';
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "SemiBold";
+    src: '@fontsource/ibm-plex-sans-thai/600.css';
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Bold";
+    src: '@fontsource/ibm-plex-sans-thai/700.css';
+}
