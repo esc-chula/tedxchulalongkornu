@@ -1,14 +1,14 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Layout from '../layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
+<Layout metadata={metadata}>
+	<div class="text-white py-16 prose mx-auto">
+		<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
 		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
@@ -58,5 +58,6 @@ import Layout from '../layouts/BlogPost.astro';
 		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
 		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
 		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+	</p></div>
+	
 </Layout>

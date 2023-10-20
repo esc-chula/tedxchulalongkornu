@@ -1,0 +1,64 @@
+@import url("./fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 61px;
+  font-weight: 700;
+  font-family: "IBM Plex Sans Thai";
+}
+
+h3 {
+  font-size: 49px;
+  font-weight: 600;
+  font-family: "IBM Plex Sans Thai";
+}
+
+h4 {
+  font-size: 31px;
+  font-weight: 500;
+  font-family: "IBM Plex Sans Thai";
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "IBM Plex Sans Thai";
+}
+
+p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "IBM Plex Sans Thai Looped";
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+[astro-icon].icon-light > * {
+  stroke-width: 1.2;
+}
+
+[astro-icon].icon-bold > * {
+  stroke-width: 2.4;
+}
+
+[data-aw-toggle-menu] path {
+  @apply transition;
+}
+[data-aw-toggle-menu].expanded g > path:first-child {
+  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+}
+
+[data-aw-toggle-menu].expanded g > path:last-child {
+  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+}

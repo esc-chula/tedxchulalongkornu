@@ -1,0 +1,31 @@
+---
+import '../styles/tailwind.css';
+
+import CommonMeta from '../components/common/CommonMeta.astro';
+import Favicons from '../components/Favicons.astro'
+import CustomStyles from "../components/CustomStyles.astro"
+import BasicScripts from '../components/common/BasicScripts.astro';
+
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <CommonMeta />
+    <Favicons />
+    <CustomStyles />
+
+  </head>
+
+  <body class="antialiased text-default bg-page tracking-tight">
+    <slot />
+
+    <BasicScripts />
+
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>
