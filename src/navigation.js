@@ -2,7 +2,7 @@ export const headerData = {
   links: [
     {
       text: "HOME",
-      href: "",
+      href: "/",
     },
     {
       text: "EVENT",

@@ -42,7 +42,7 @@ const {
   position = "center",
 } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname.split("/")[1])}`;
 ---
 
 <header
@@ -89,7 +89,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                   <a
                     class:list={[
                       "text-black md:text-white px-4 py-3 flex items-centers md:hover:text-TED-yellow md:hover:underline md:decoration-TED-yellow md:underline-offset-4 md:decoration-2 md:border-0 border-b-2 font-display transition duration-250 ease-in-out md:bg-black bg-white",
-                      { "aw-link-active": href === currentPath },
+                      { "md:text-TED-yellow": href === currentPath, 'md:underline': href === currentPath }
                     ]}
                     href={href}
                   >

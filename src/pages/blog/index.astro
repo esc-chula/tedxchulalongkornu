@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Layout from "@/layouts/Layout.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) =>
@@ -13,7 +14,7 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<PageLayout metadata={metadata}>
   <main>
     <section>
       <ul>
@@ -38,7 +39,7 @@ const metadata = {
       </ul>
     </section>
   </main>
-</Layout>
+</PageLayout>
 
 <style>
   main {
