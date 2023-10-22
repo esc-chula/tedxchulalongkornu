@@ -2,7 +2,7 @@ export const headerData = {
   links: [
     {
       text: "HOME",
-      href: "/",
+      href: "",
     },
     {
       text: "EVENT",
@@ -38,7 +38,7 @@ export const footerData = {
     },
     {
       title: "Contact us",
-      links: [{  text: "fortedxchulalongkornu@gmail.com", href: "#" }],
+      links: [{ text: "fortedxchulalongkornu@gmail.com", href: "#" }],
     },
   ],
 };
