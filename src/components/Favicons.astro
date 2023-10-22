@@ -1,8 +1,17 @@
 ---
-import favIcon from '../../public/favicon.ico';
-import favIconSvg from '../../public/favicon.svg';
+import favIcon from "../../public/favicon.ico";
+import appleTouchIcon from "../../public/apple-touch-icon.png";
+import favicon32 from "../../public/favicon-32x32.png";
+import favicon16 from "../../public/favicon-16x16.png";
+import siteManifest from "../../public/site.webmanifest";
+import safariPinnedTab from "../../public/safari-pinned-tab.svg";
 ---
 
 <link rel="shortcut icon" href={favIcon} />
-<link rel="icon" type="image/svg+xml" href={favIconSvg.src} />
-<link rel="mask-icon" href={favIconSvg.src} color="#8D46E7" />
+<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
+<link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
+<link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />
+<link rel="manifest" href={siteManifest} />
+<link rel="mask-icon" href={safariPinnedTab.src} color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />

@@ -1,0 +1,37 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+export interface MetaData {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  date?: string;
+  modified?: string;
+  author?: string;
+  section?: string;
+  tags?: string;
+}
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata = { title: SITE_TITLE, description: SITE_DESCRIPTION } } =
+  Astro.props;
+---
+
+<head>
+  <title>{metadata.title}</title>
+  <meta name="description" content={metadata.description} />
+  <meta property="og:title" content={metadata.title} />
+  <meta property="og:description" content={metadata.description} />
+  <meta property="og:image" content={metadata.image} />
+  <meta property="og:url" content={metadata.url} />
+  <meta property="og:type" content={metadata.type} />
+  <meta property="article:published_time" content={metadata.date} />
+  <meta property="article:modified_time" content={metadata.modified} />
+  <meta name="author" content={metadata.author} />
+  <meta name="section" content={metadata.section} />
+  <meta name="tags" content={metadata.tags} />
+</head>

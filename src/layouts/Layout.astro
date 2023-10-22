@@ -1,20 +1,27 @@
 ---
-import '../styles/tailwind.css';
+import "../styles/tailwind.css";
 
-import CommonMeta from '../components/common/CommonMeta.astro';
-import Favicons from '../components/Favicons.astro'
-import CustomStyles from "../components/CustomStyles.astro"
-import BasicScripts from '../components/common/BasicScripts.astro';
+import CommonMeta from "../components/common/CommonMeta.astro";
+import Favicons from "../components/Favicons.astro";
+import CustomStyles from "../components/CustomStyles.astro";
+import BasicScripts from "../components/common/BasicScripts.astro";
+import type { MetaData } from "@/components/Metadata.astro";
+import Metadata from "@/components/Metadata.astro";
 
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <CommonMeta />
     <Favicons />
+    <Metadata metadata={metadata} />
     <CustomStyles />
-
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
