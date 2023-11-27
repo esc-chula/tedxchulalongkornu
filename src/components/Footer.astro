@@ -1,8 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { SITE } from '../utils/config';
-import { getHomePermalink } from '../utils/permalinks';
-import Logo from './LogoWhite.astro';
+import { Icon } from "astro-icon/components";
+import { SITE } from "../utils/config";
+import { getHomePermalink } from "../utils/permalinks";
+import Logo from "./LogoWhite.astro";
 
 interface Link {
   text?: string;
@@ -21,42 +21,49 @@ export interface Props {
   links: Array<Links>;
 }
 
-const {  links = [] } = Astro.props;
+const { links = [] } = Astro.props;
 ---
 
-<footer class:list={['relative border-t border-gray-200 not-prose b-0 font-body']}>
-  <div class="bg-white absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 text-slate-300">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-6">
+<footer
+  class:list={["not-prose b-0 relative border-t border-gray-200 font-body"]}
+>
+  <div class="pointer-events-none absolute inset-0 bg-white" aria-hidden="true">
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 text-slate-300 sm:px-6">
+    <div class="grid grid-cols-12 gap-4 gap-y-8 py-8 sm:gap-8 md:py-12">
+      <div class="col-span-12 md:col-span-6">
         <div class="mb-2">
           <a class="inline-block" href={getHomePermalink()}><Logo /></a>
         </div>
-        
       </div>
-      {
-        links.map(({ icon, title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-3">
-            <h4 class="mb-2 text-TED-red">{title}</h4>
-            {links && Array.isArray(links) && links.length > 0 && (
-              <ul>
-                {links.map(({icon, text, href, ariaLabel}) => (
-                  <li class="mb-2">
-                    <a
-                      class="text-black flex flex-row gap-2 hover:text-gray-600 hover:underline transition duration-150 ease-in-out"
-                      href={href}
-                      aria-label={ariaLabel}
-                    >
-                    {icon && <Icon name={icon} class="w-5 h-5" />}
-                    <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
+
+      <div
+        class="col-span-12 flex flex-col gap-4 md:col-span-6 md:flex-row md:gap-16"
+      >
+        {
+          links.map(({ icon, title, links }) => (
+            <div class="">
+              <h4 class="mb-2 text-TED-red">{title}</h4>
+              {links && Array.isArray(links) && links.length > 0 && (
+                <ul>
+                  {links.map(({ icon, text, href, ariaLabel }) => (
+                    <li class="mb-2">
+                      <a
+                        class="flex flex-row gap-2 text-black transition duration-150 ease-in-out hover:text-gray-600 hover:underline"
+                        href={href}
+                        aria-label={ariaLabel}
+                      >
+                        {icon && <Icon name={icon} class="h-5 w-5" />}
+                        <Fragment set:html={text} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </footer>

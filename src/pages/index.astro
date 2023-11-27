@@ -3,26 +3,45 @@ import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <PageLayout>
-  <div class="prose mx-auto flex flex-col px-4 py-16 text-white">
-    <h1 class="text-center text-screen font-bold text-TED-red">
-      Community where ideas grow
-    </h1>
-    <div class="grid-col-2 grid">
-      <h2 class="text-subhead text-TED-yellow">What is TEDxChulalongkornU?</h2>
-      <div class="grid-row grid text-body text-white">
-        <p>
-          In the spirit of ideas worth spreading, TED has created a program
-          called TEDx. TEDx is a program of local, self-organized events that
-          bring people together to share a TED-like experience. Our event is
-          called TEDxChulalongkorn, where x = independently organized TED event.
-        </p>
+  <div
+    class="prose relative mx-auto flex w-full max-w-screen-lg flex-col items-center gap-24 px-4 py-16 text-white"
+  >
+    <section class="relative z-50 mx-auto max-w-screen-sm">
+      <h1 class="text-center text-screen font-bold text-TED-red">
+        Community where<br />ideas grow
+      </h1>
+
+      <div class="">
+        <div class="aspect-video w-full rounded-lg bg-[#D9D9D9]"></div>
       </div>
-    </div>
-    <div class="flex flex-col items-center">
-      <h2 class="text-center text-screen text-TED-red">Past Talks</h2>
+    </section>
+
+    <section class="m relative z-50 grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <div class="flex flex-col gap-2">
+        <h2 class="my-0 whitespace-pre-wrap text-subhead text-TED-yellow">
+          What is TEDxChulalongkornU?
+        </h2>
+        <div class="text-body text-white">
+          <p>
+            In the spirit of ideas worth spreading, TED has created a program
+            called TEDx. TEDx is a program of local, self-organized events that
+            bring people together to share a TED-like experience. Our event is
+            called TEDxChulalongkorn, where x = independently organized TED
+            event.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full overflow-hidden">
+        <div class="aspect-square w-full rounded-lg bg-[#D9D9D9]"></div>
+      </div>
+    </section>
+
+    <section class="relative z-50 flex flex-col items-center">
+      <h2 class="my-0 text-center text-screen text-TED-red">Past Talks</h2>
       <p class="text-center text-title text-white">
-        All talks that we proud to present
+        All talks that we're proud to present
       </p>
-    </div>
+    </section>
   </div>
 </PageLayout>

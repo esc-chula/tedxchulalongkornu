@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontSize: {
         screen: [
-          "96px",
+          "72px",
           {
             lineHeight: "1",
             fontWeight: "700",
