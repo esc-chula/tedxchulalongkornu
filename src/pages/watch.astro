@@ -1,0 +1,58 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { Image } from "astro:assets";
+import WatchQuote from "../../public/WatchQuote.png";
+import MostPopularVDO from "@/components/MostPopularVDO.astro";
+---
+
+<PageLayout>
+  <div
+    class="relative mx-auto w-full flex-col items-center gap-24 px-4 py-3 text-white"
+  >
+    <section class="relative z-50 mx-auto rounded-md">
+      <Image
+        src={WatchQuote}
+        alt="WatchQuote"
+        width={1200}
+        height={677}
+        class="mx-auto"
+      />
+    </section>
+
+    <section class="relative z-50 mx-8 max-w-full items-center">
+      <h1 class="mb-8 text-center text-screen text-TED-red">Most Popular</h1>
+      <div class="mx-2 flex overflow-x-scroll sm:mx-2 md:mx-4 lg:mx-8">
+        <MostPopularVDO
+          id="1pRtDpRJZdY"
+          title="อย่าให้รักเดียวเป็นเรื่องมหัศจรรย์"
+          views="1.5M"
+          speaker="NAPAPORN TRIVITWAREEGUNE"
+        />
+        <MostPopularVDO
+          id="48A9SU6_bQ8"
+          title="โปรดเรียกฉันด้วยนามอันแท้จริง"
+          views="1.3M"
+          speaker="นิติ ชัยชิตาทร"
+        />
+        <MostPopularVDO
+          id="tJ-rtvjvsrE"
+          title="โลกสวย..."
+          views="865K"
+          speaker="นรีกุล เกตุประภากร"
+        />
+        <MostPopularVDO
+          id="T9R4sZrvGd0"
+          title="พลิกมุมคิด... ชีวิต Take Off"
+          views="661K"
+          speaker="เอกก์ ภทรธนกุล"
+        />
+        <MostPopularVDO
+          id="XIVFyHU79J0"
+          title="ศรัทธาราคาสิบบาท"
+          views="462K"
+          speaker="อุไรวรรณ ศิวะกุล"
+        />
+      </div>
+    </section>
+  </div>
+</PageLayout>

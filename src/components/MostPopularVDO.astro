@@ -1,0 +1,29 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  speaker: string;
+  views: string;
+}
+
+const { id, title, speaker, views } = Astro.props;
+
+const VDOLink = "https://www.youtube.com/embed/" + id;
+---
+
+<div class="mx-2 rounded-lg sm:mx-2 md:mx-4 lg:mx-8">
+  <iframe
+    width="593"
+    class="aspect-video rounded-lg"
+    src={VDOLink}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  <div class="my-4 text-body text-white">
+    <div class="my-4 flex items-center justify-between text-TED-yellow">
+      <p>{title}</p>
+      <p>{views}</p>
+    </div>
+    <p>{speaker}</p>
+  </div>
+</div>
