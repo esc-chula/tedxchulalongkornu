@@ -7,7 +7,7 @@ import MostPopularVDO from "@/components/MostPopularVDO.astro";
 
 <PageLayout>
   <div
-    class="relative mx-auto w-full flex-col items-center gap-24 px-4 py-3 text-white"
+    class="relative mx-auto w-full flex-col items-center gap-24 px-4 py-16 text-white"
   >
     <section class="relative z-50 mx-auto rounded-md">
       <Image
@@ -15,12 +15,20 @@ import MostPopularVDO from "@/components/MostPopularVDO.astro";
         alt="WatchQuote"
         width={1200}
         height={677}
-        class="mx-auto"
+        class="mx-auto rounded-lg"
       />
     </section>
 
+    <div
+      class="z-999 absolute right-[-30px] top-[400px] h-[800px] w-[800px] rounded-full"
+      style="background: radial-gradient(50% 50% at 50% 50%, #754DF2 0%, rgba(117, 77, 242, 0.00) 100%);"
+    >
+    </div>
+
     <section class="relative z-50 mx-8 max-w-full items-center">
-      <h1 class="mb-8 text-center text-screen text-TED-red">Most Popular</h1>
+      <h1 class="mb-8 mt-40 text-center text-screen text-TED-red">
+        Most Popular
+      </h1>
       <div class="mx-2 flex overflow-x-scroll sm:mx-2 md:mx-4 lg:mx-8">
         <MostPopularVDO
           id="1pRtDpRJZdY"

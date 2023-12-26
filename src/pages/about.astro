@@ -6,7 +6,7 @@ import AboutUs from "../../public/AboutUs.png";
 
 <PageLayout>
   <div
-    class="relative mx-auto flex w-full flex-col items-center gap-24 px-4 py-16 text-white"
+    class="relative mx-auto flex w-full flex-col items-center gap-24 overflow-x-hidden px-4 py-16 text-white"
   >
     <section class="h-465 relative z-50 mx-auto">
       <div class="flex items-center justify-center">
@@ -18,10 +18,17 @@ import AboutUs from "../../public/AboutUs.png";
           class="mx-auto"
         />
       </div>
-      <h1 class="mb-8 text-center text-screen font-bold text-TED-red">
+      <div
+        class="z-999 absolute right-[-500px] top-[-100px] h-[800px] w-[800px] rounded-full"
+        style="background: radial-gradient(50% 50% at 50% 50%, #754DF2 0%, rgba(117, 77, 242, 0.00) 100%);"
+      >
+      </div>
+      <h1
+        class="z-80 relative mb-8 text-center text-screen font-bold text-TED-red"
+      >
         About Us
       </h1>
-      <div class="text-center text-body text-white">
+      <div class="z-80 relative text-center text-body text-white">
         <p>
           In the spirit of ideas worth spreading, TED has created a program
           called TEDx. TEDx is a program<br /> of local, self-organized events
@@ -42,10 +49,17 @@ import AboutUs from "../../public/AboutUs.png";
           class="mx-auto"
         />
       </div>
-      <h1 class="mb-8 text-center text-screen font-bold text-TED-red">
+      <div
+        class="z-999 absolute left-[-350px] top-[-150px] h-[800px] w-[800px] rounded-full"
+        style="background: radial-gradient(50% 50% at 50% 50%, #EA76E7 0%, rgba(234, 118, 231, 0.00) 100%);"
+      >
+      </div>
+      <h1
+        class="z-80 relative mb-8 text-center text-screen font-bold text-TED-red"
+      >
         Our Sponsor
       </h1>
-      <div class="text-center text-body text-white">
+      <div class="z-80 relative text-center text-body text-white">
         <p>
           In the spirit of ideas worth spreading, TED has created a program
           called TEDx. TEDx is a program<br /> of local, self-organized events
