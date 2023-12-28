@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { talks } from "../data/talks";
+import PastTalk from "../components/landing/PastTalk.astro";
 ---
 
 <PageLayout>
@@ -56,8 +57,9 @@ import { talks } from "../data/talks";
         All talks that we're proud to present
       </p>
 
-      <!-- for loop -->
-      
+      <div class="mx-2 flex w-screen overflow-x-scroll sm:px-2 md:px-4 lg:px-8">
+        {talks.map((item) => <PastTalk {...item} />)}
+      </div>
     </section>
   </div>
 </PageLayout>

@@ -1,12 +1,17 @@
 ---
-const { no } = Astro.props;
+interface Props {
+  no: string;
+  videoId: string;
+}
+
+const { no, videoId } = Astro.props;
 ---
 
-<div class="flex flex-col gap-2">
+<div class="mx-2 rounded-lg sm:mx-2 md:mx-4 lg:mx-8">
   <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/xQ9pkQ3xGXk?si=thFJnVAswgc14t45"
+    width="593"
+    class="aspect-video rounded-lg"
+    src={"https://www.youtube.com/embed/" + videoId}
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
