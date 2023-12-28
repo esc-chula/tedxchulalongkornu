@@ -1,0 +1,18 @@
+---
+const { no } = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/xQ9pkQ3xGXk?si=thFJnVAswgc14t45"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    class="rounded-md"
+    allowfullscreen></iframe>
+  <p class="text-lg text-white">
+    <span class="font-bold">Event #{no}</span> @ChulalongkornU
+  </p>
+</div>

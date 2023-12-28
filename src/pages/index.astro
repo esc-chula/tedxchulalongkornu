@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import { talks } from "../data/talks";
 ---
 
 <PageLayout>
@@ -12,7 +13,13 @@ import PageLayout from "../layouts/PageLayout.astro";
       </h1>
 
       <div class="">
-        <div class="aspect-video w-full rounded-lg bg-[#D9D9D9]"></div>
+        <div class="aspect-video w-full rounded-lg">
+          <img
+            src="/assets/homepage/1.png"
+            alt=""
+            class="object-fit h-full w-full"
+          />
+        </div>
       </div>
     </section>
 
@@ -33,7 +40,13 @@ import PageLayout from "../layouts/PageLayout.astro";
       </div>
 
       <div class="w-full overflow-hidden">
-        <div class="aspect-square w-full rounded-lg bg-[#D9D9D9]"></div>
+        <div class="aspect-square w-full rounded-lg">
+          <img
+            src="/assets/homepage/2.png"
+            alt=""
+            class="h-full w-full object-contain"
+          />
+        </div>
       </div>
     </section>
 
@@ -42,6 +55,9 @@ import PageLayout from "../layouts/PageLayout.astro";
       <p class="text-center text-title text-white">
         All talks that we're proud to present
       </p>
+
+      <!-- for loop -->
+      
     </section>
   </div>
 </PageLayout>
