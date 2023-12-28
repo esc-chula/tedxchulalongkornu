@@ -17,13 +17,17 @@ const { Content } = await post.render();
 
 const metadata = {
   title: post.data.title,
-  description: post.data.description,
+  description: "An article by TedXChulalongkornU",
   type: "article",
 };
 ---
 
 <BlogPost {...post.data} metadata={metadata}>
-  <main class="text-white p-4">
+  <main class="mx-auto max-w-4xl p-4 text-white sm:p-10">
+    <h1 class="mb-8 font-display text-screen text-TED-yellow">
+      {post.data.title}
+    </h1>
+
     <Content />
   </main>
 </BlogPost>
