@@ -4,10 +4,10 @@ export const headerData = {
       text: "HOME",
       href: "/",
     },
-    {
-      text: "EVENT",
-      href: "/event",
-    },
+    // {
+    //   text: "EVENT",
+    //   href: "/event",
+    // },
     {
       text: "WATCH",
       href: "/watch",
@@ -16,10 +16,10 @@ export const headerData = {
       text: "BLOG",
       href: "/blog",
     },
-    {
-      text: "TICKET",
-      href: "/ticket",
-    },
+    // {
+    //   text: "TICKET",
+    //   href: "/ticket",
+    // },
     {
       text: "ABOUT",
       href: "/about",
